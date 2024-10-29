@@ -13,11 +13,11 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    environment: "Docker Builds"
 
     steps:
     - name: Dump GitHub context
       env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
         DOCKER_HUB_USERNAME: ${{ vars.DOCKER_HUB_USERNAME }}
       run: env
 
