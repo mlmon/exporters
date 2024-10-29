@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Print Da User
-      run: echo "${#DOCKER_HUB_USERNAME}"
+      run: echo "${DOCKER_HUB_USERNAME}"
       env:
         DOCKER_HUB_USERNAME: ${{ vars.DOCKER_HUB_USERNAME }}
 
