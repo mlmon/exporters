@@ -17,6 +17,7 @@ func main() {
 	client, err := dagger.Connect(ctx, dagger.WithLogOutput(os.Stderr))
 	if err != nil {
 		logger.Error("%v", err)
+		os.Exit(1)
 	}
 	defer client.Close()
 
@@ -27,5 +28,6 @@ func main() {
 		Publish(ctx, "nrfisher/efa-node-exporter:latest")
 	if err != nil {
 		logger.Error("%w", err)
+		os.Exit(1)
 	}
 }
