@@ -27,7 +27,15 @@ func main() {
 		Branch("main").
 		Tree().
 		Directory("4.validation_and_observability/3.efa-node-exporter").
-		DockerBuild(dagger.DirectoryDockerBuildOpts{Dockerfile: "Dockerfile", Platform: platform})
+		DockerBuild(dagger.DirectoryDockerBuildOpts{
+			Dockerfile: "Dockerfile",
+			Platform:   platform,
+			BuildArgs: []dagger.BuildArg{
+				{"GOLANG_VERSION", "1.23.2"},
+				{"NODE_EXPORTER_VERSION", "v1.8.2"},
+				{"PROCFS_EXPORTER_VERSION", "v0.14.0"},
+				{"EFA_INSTALLER_VERSION", "1.30.0"},
+			}})
 
 	_, err = client.Container(dagger.ContainerOpts{Platform: platform}).
 		From("public.ecr.aws/docker/library/ubuntu:20.04").
