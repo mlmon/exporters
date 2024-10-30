@@ -3,16 +3,28 @@ module github.com/mlmon/exporters
 go 1.23.1
 
 require (
-	dagger.io/dagger v0.13.6 // indirect
+	dagger.io/dagger v0.13.6
+	github.com/go-kit/log v0.2.1
+	github.com/prometheus/client_golang v1.20.5
+	github.com/prometheus/procfs v0.15.1
+)
+
+require (
 	github.com/99designs/gqlgen v0.17.55 // indirect
 	github.com/Khan/genqlient v0.7.0 // indirect
 	github.com/adrg/xdg v0.5.1 // indirect
+	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
+	github.com/cespare/xxhash/v2 v2.3.0 // indirect
+	github.com/go-logfmt/logfmt v0.5.1 // indirect
 	github.com/go-logr/logr v1.4.2 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.22.0 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
+	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
+	github.com/prometheus/client_model v0.6.1 // indirect
+	github.com/prometheus/common v0.55.0 // indirect
 	github.com/sosodev/duration v1.3.1 // indirect
 	github.com/vektah/gqlparser/v2 v2.5.17 // indirect
 	go.opentelemetry.io/otel v1.27.0 // indirect
